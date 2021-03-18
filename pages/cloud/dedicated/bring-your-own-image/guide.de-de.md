@@ -15,6 +15,8 @@ Mithilfe der Funktion *Bring Your Own Image* (BYOI) können Sie *cloudready* Ima
 <br>In einem Satz agnostisch zu sein von der Infrastruktur, auf der das Bild beginnt.
 Zusätzlich zu den unten genannten Voraussetzungen und Einschränkungen muss sichergestellt werden, dass das (gewonnene, erstellte) Image die technischen Anforderungen eines Cloudready-Images erfüllt. Das Image muss in der Lage sein, unabhängig von der Servertypologie, von der es ausgeht, einen korrekten Booster zu erstellen. Im Falle der Verwendung eines Config Drive muss es auch den Cloud Init Dienst einbeziehen. Schließlich müssen die Systemkonfigurationen es ermöglichen, das Betriebssystem, insbesondere die Netzwerkkonfigurationen, vollständig in Gang setzen zu lassen.
 
+Sie können diese Option auch bei der Reinstallation Ihres Servers über das OVHcloud Kundencenter aktivieren ([Erste Schritte](../erste-schritte-dedicated-server/#installrtm)). Bitte verwenden Sie die nachfolgenden Informationen als Referenz.
+
 **Diese Anleitung erklärt, wie Sie *Bring Your Own Image* über die OVHcloud APIv6 verwenden.**
 
 ## Voraussetzungen

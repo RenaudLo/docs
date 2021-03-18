@@ -19,6 +19,8 @@ Grazie alla tecnologia Bring Your Own Image, è possibile implementare immagini 
 <br>In una frase, essere agnostici dell'infrastruttura su cui l'immagine inizia.
 Oltre ai requisiti e ai limiti indicati in appresso, è necessario assicurarsi che l'immagine (recuperata, generata) risponda alla corretta definizione delle aspettative tecniche di un'immagine Cloudready. L'immagine deve essere in grado di bootare correttamente indipendentemente dalla tipologia di server su cui avvia, deve anche imbarcare il servizio Cloud Init nel caso di utilizzo di un Config Drive. Le configurazioni di sistema devono permettere di lasciare che l'OS si avvii completamente, in particolare quelle relative alla rete.
 
+Questa opzione può essere utilizzata anche durante la reinstallazione del server dallo Spazio Cliente OVHcloud ([fai riferimento alla guida "Primi passi"](../iniziare-a-utilizzare-server-dedicato//#installrtm)). Seguire le istruzioni come riferimento.
+
 **Scopri come configurare BringYourOwnImage con l'APIv6 OVHcloud**
 
 ## Prerequisiti
@@ -66,17 +68,17 @@ Per creare e configurare la tua immagine, utilizza questa chiamata e inserisci i
 | URL | L'URL dove recuperare l'immagine. |
 | checkSum | Il checksum della tua immagine. |
 | checkSumType | Il checksum dell'immagine da implementare (md5, sha1, sha256, sha512). |
-| enable (ConfigDrive)* | Attiva la creazione della partizione ConfigDrive (cloud-init) |
-| hostname (ConfigDrive)* | L'hostname del tuo server. |
-| sshKey (ConfigDrive)* | La tua chiave SSH pubblica. |
-| userData (ConfigDrive)* | Il tuo script di post-installazione. |
-| userMetadatas (ConfigDrive)* | Meta datas utilizzati da CloudInit al momento del boot. |
+| enable (ConfigDrive)\* | Attiva la creazione della partizione ConfigDrive (cloud-init) |
+| hostname (ConfigDrive)\* | L'hostname del tuo server. |
+| sshKey (ConfigDrive)\* | La tua chiave SSH pubblica. |
+| userData (ConfigDrive)\* | Il tuo script di post-installazione. |
+| userMetadatas (ConfigDrive)\* | Meta datas utilizzati da CloudInit al momento del boot. |
 | description | Il nome della tua immagine. |
 | diskGroupId | ID del disco che deve essere utilizzato. |
 | httpHeader | Solo se necessario per scaricare l'immagine. |
 | type | Tipo/formato della tua immagine (qcow2, raw, ova). |
 
-* Il ConfigDrive è una partizione utilizzata da cloud-init al primo boot del tuo server per stabilire la configurazione desiderata. È possibile scegliere se attivare o meno questa opzione.
+\* Il ConfigDrive è una partizione utilizzata da cloud-init al primo boot del tuo server per stabilire la configurazione desiderata. È possibile scegliere se attivare o meno questa opzione.
 
 ![POST API call](images/postapicall.png){.thumbnail}
 

@@ -25,7 +25,7 @@ También puede utilizar esta opción al reinstalar el servidor desde el área de
 
 ## Requisitos
 
-- Tener un [servidor dedicado de OVHcloud](https://www.ovhcloud.com/es-es/bare-metal/).
+- Tener un [servidor dedicado de OVHcloud](https://www.ovhcloud.com/es/bare-metal/).
 - Haber generado los [credenciales para utilizar la APIv6](https://docs.ovh.com/gb/en/api/first-steps-with-ovh-api/).
 
 > [!warning]
@@ -48,7 +48,7 @@ Si su servidor dispone de un boot **uefi**, deberá prever en su imagen una part
 
 ### Desplegar la imagen
 
-Conéctese a [https://api.ovh.com/](https://api.ovh.com/){.external} y acceda a la sección `/dedicated/server`{.action}. El campo `Filter` le permitirá buscar "BringYourOwnImage".
+Conéctese a [https://ca.api.ovh.com/](https://ca.api.ovh.com/){.external} y acceda a la sección `/dedicated/server`{.action}. El campo `Filter` le permitirá buscar "BringYourOwnImage".
 
 Dispone de tres llamadas a la API asociadas a la funcionalidad BringYourOwnImage.
 
@@ -68,17 +68,17 @@ Para crear y desplegar su imagen, utilice la siguiente llamada y complete los ca
 | URL | URL donde obtener la imagen. |
 | checkSum | El checksum de su imagen. |
 | checkSumType | El checksum de la imagen a desplegar (md5, sha1, sha256, sha512). |
-| enable (ConfigDrive)* | Activar la creación de la partición ConfigDrive (cloud-init) |
-| hostname (ConfigDrive)* | El hostname del servidor. |
-| sshKey (ConfigDrive)* | Su llave SSH pública. |
-| userData (ConfigDrive)* | Su script de post-instalación. |
-| userMetadatas (ConfigDrive)* | Meta datas utilizadas por CloudInit en el momento del arranque. |
+| enable (ConfigDrive)\* | Activar la creación de la partición ConfigDrive (cloud-init) |
+| hostname (ConfigDrive)\* | El hostname del servidor. |
+| sshKey (ConfigDrive)\* | Su llave SSH pública. |
+| userData (ConfigDrive)\* | Su script de post-instalación. |
+| userMetadatas (ConfigDrive)\* | Meta datas utilizadas por CloudInit en el momento del arranque. |
 | description | El nombre de su imagen. |
 | diskGroupId | El id del disco que se debe utilizar. |
 | httpHeader | Sólo si es necesario para descargar la imagen. |
 | type | El tipo/formato de su imagen (qcow2, raw, ova). |
 
-* ConfigDrive es una partición utilizada por cloud-init en el primer arranque del servidor para establecer la configuración deseada. Puede elegir si desea activar o no esta opción.
+\* ConfigDrive es una partición utilizada por cloud-init en el primer arranque del servidor para establecer la configuración deseada. Puede elegir si desea activar o no esta opción.
 
 ![POST API call](images/postapicall.png){.thumbnail}
 

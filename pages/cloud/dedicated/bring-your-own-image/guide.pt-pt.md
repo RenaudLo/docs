@@ -15,6 +15,8 @@ Graças à tecnologia Bring Your Own Image, é-lhe agora possível implementar i
 <br>Numa frase, ser agnóstico da infraestrutura na qual a imagem começa.
 Para além dos requisitos e limitações citados abaixo, é necessário assegurar que a imagem (recuperada, gerada) responde à boa definição das expetativas técnicas de uma imagem cloudready. A imagem deve ser capaz de bootar corretamente qualquer que seja a tipologia de servidor em que começa, deve também embarcar o serviço Cloud Init no caso de utilização de um Config Drive. Por último, as configurações do sistema devem permitir que o SO se inicie plenamente, em especial as relativas à rede.
 
+Também pode utilizar esta opção durante a reinstalação do seu servidor a partir da Área de Cliente OVHcloud ([referência ao guia "Primeiros passos"](../primeiros-passos-servidor-dedicado/#installrtm)). Queira tomar as seguintes instruções como referência.
+
 **Saiba como configurar BringYourOwnImage a partir da APIv6 OVHcloud**
 
 ## Requisitos
